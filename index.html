@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ᎷᏐᩚᎷᏐᩚ Official Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg-glow glow-1"></div>
+<div class="bg-glow glow-2"></div>
+
+<div class="container">
+
+<!-- HEADER DEVICE (ファンマークコピー機能付き) -->
+    <header class="profile-header" style="padding: 0; overflow: hidden; border: none; background: none; box-shadow: none;">
+        <!-- 絶対配置でコピーボタンを重ねるためのコンテナ -->
+        <div style="position: relative; width: 100%; height: auto; margin: 0; padding: 0;">
+            
+            <!-- 新しい最強のヘッダー画像を表示や！ -->
+            <img class="avatar" src="images/top.png" alt="ᎷᏐᩚᎷᏐᩚ Official Header" style="width: 100%; height: auto; border-radius: 24px; border: 1px solid var(--border-accent); display: block;">
+            
+            <!-- 📋 COPYボタンの上に透明なタップ領域をピッタリ配置（クリックでJSを実行） -->
+            <button onclick="copyFanMark()" style="position: absolute; left: 63%; top: 62.5%; width: 26%; height: 6.5%; background: none; border: none; border-radius: 30px; cursor: pointer; z-index: 20; outline: none;" title="ファンマークをコピー"></button>
+            
+        </div>
+    </header>
+
+    <!-- 💡 コピー成功時にふわっと出るトースト通知（ネオンピンク仕様） -->
+    <div id="copy-toast" style="position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(100px); background: rgba(255, 0, 102, 0.9); color: #fff; padding: 12px 24px; border-radius: 50px; font-weight: bold; font-family: 'Noto Sans JP', sans-serif; font-size: 0.9rem; box-shadow: 0 0 15px rgba(255, 0, 102, 0.6); z-index: 9999; opacity: 0; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); pointer-events: none; border: 1px solid #ff66aa;">
+        💘 ファンマークをコピーしたよ！ (ᰔᩚ³³)
+    </div>
+
+    <!-- ⚡ ファンマークコピー用JavaScript -->
+    <script>
+    function copyFanMark() {
+        // 例の量産型・地雷系最強ハートファンマークの文字列
+        const fanMark = "ᰔᩚ³³";
+        
+        // クリップボードに書き込み
+        navigator.clipboard.writeText(fanMark).then(() => {
+            const toast = document.getElementById('copy-toast');
+            
+            // トースト通知をふわっと出現させる
+            toast.style.opacity = "1";
+            toast.style.transform = "translateX(-50%) translateY(0)";
+            
+            // 2秒後に自動で隠す
+            setTimeout(() => {
+                toast.style.opacity = "0";
+                toast.style.transform = "translateX(-50%) translateY(100px)";
+            }, 2000);
+        }).catch(err => {
+            console.error('コピー失敗や...: ', err);
+        });
+    }
+    </script>
+
+
+<!-- ==========================================
+         METRICS, CONCEPT, STANCE を画像1枚に統合
+         ========================================== -->
+    <section class="design-card" style="padding: 0; overflow: hidden; border: none; background: none; box-shadow: none;">
+        <div style="width: 100%; height: auto; margin: 0;">
+            <img src="images/profile.png" alt="ᎷᏐᩚᎷᏐᩚ Profile, Concept & Stance" style="width: 100%; height: auto; display: block; border-radius: 16px;">
+        </div>
+    </section>
+
+    <!-- MINDSET -->
+    <section class="design-card mind-gradient-box">
+        <h2 class="card-title">MIND</h2>
+        <p class="mindset-quote">
+            高みを目指して 寄り添って純粋に応援してくれる<br>
+            愛重めで一途で優しい殿方に出逢えますように
+        </p>
+    </section>
+
+<section class="design-card" style="padding: 0; overflow: hidden; border: none; background: none; box-shadow: none; margin-top: -10px; margin-bottom: 10px;">
+        <div style="position: relative; width: 100%; height: auto; margin: 0; padding: 0;">
+            
+            <img src="images/link.png" alt="ᎷᏐᩚᎷᏐᩚ MIND & OFFICIAL LINKS" style="width: 100%; height: auto; display: block; border-radius: 16px;">
+            
+            <a href="https://twitter.com/mimi424palmu" target="_blank" style="position: absolute; left: 6%; top: 35.8%; width: 88%; height: 9.0%; border-radius: 12px; cursor: pointer; display: block; z-index: 10;"></a>
+            
+           <a href="https://www.amazon.jp/hz/wishlist/ls/5ZKJ4BB3URP7?ref_=wl_share" target="_blank" style="position: absolute; left: 6%; top: 56.6%; width: 88%; height: 9.0%; border-radius: 12px; cursor: pointer; display: block; z-index: 10;"></a>
+            
+            <a href="https://www.amazon.jp/hz/wishlist/ls/812K6FTU0XBK?ref_=wl_share" target="_blank" style="position: absolute; left: 6%; top: 67.0%; width: 88%; height: 9.0%; border-radius: 12px; cursor: pointer; display: block; z-index: 10;"></a>
+            
+            <a href="https://www.instagram.com/mimicham_palmu_424?igsh=MXJ0M3JkNnE0OXIwbQ==&utm_source=qr/" target="_blank" style="position: absolute; left: 6%; top: 77.4%; width: 88%; height: 9.0%; border-radius: 12px; cursor: pointer; display: block; z-index: 10;"></a>
+            
+            <a href="https://discord.gg/96b3nMNk" target="_blank" style="position: absolute; left: 6%; top: 87.8%; width: 88%; height: 9.0%; border-radius: 12px; cursor: pointer; display: block; z-index: 10;"></a>
+
+        </div>
+    </section>
+
+<!-- MEMORIES (HISTORY) -->
+    <section class="design-card" style="padding: 0; overflow: hidden; border: none; background: none; box-shadow: none;">
+        <!-- 最高の思い出たちが詰まったグラフィックを1枚で贅沢に表示や！ -->
+        <div style="width: 100%; height: auto; margin: 0;">
+            <img src="images/memory.png" alt="ᎷᏐᩚᎷᏐᩚ MEMORIES" style="width: 100%; height: auto; display: block; border-radius: 16px;">
+        </div>
+    </section>
+
+<!-- BENEFITS (申告制特典) -->
+    <section class="design-card" style="padding: 0; overflow: hidden; border: none; background: none; box-shadow: none;">
+        <!-- 各ティアの豪華なリワードが網羅されたグラフィックを表示や！ -->
+        <div style="width: 100%; height: auto; margin: 0;">
+            <img src="images/prize.png" alt="ᎷᏐᩚᎷᏐᩚ BENEFITS" style="width: 100%; height: auto; display: block; border-radius: 16px;">
+        </div>
+    </section>
+
+
+    <!-- SUPPORTERS -->
+    <section class="design-card">
+        <h2 class="card-title">SUPPORTERS <small>6月度カウント</small></h2>
+        <div class="sponsors-grid">
+            <div class="sponsor-node"><span class="node-tier text-orange">LV5</span><span class="node-name">ちゃむ❶❷</span></div>
+            <div class="sponsor-node"><span class="node-tier text-red">LV4</span><span class="node-name">たくぽさん❶❷</span></div>
+            <div class="sponsor-node"><span class="node-tier text-pink">LV3</span><span class="node-name">輝空</span></div>
+            <div class="sponsor-node"><span class="node-tier text-purple">LV2</span><span class="node-name">4️⃣</span></div>
+            <div class="sponsor-node"><span class="node-tier text-cyan">LV1</span><span class="node-name">3️⃣5️⃣</span></div>
+        </div>
+    </section>
+
+<section class="design-card" style="padding: 0; overflow: hidden; border: none; background: none; box-shadow: none;">
+        <div style="width: 100%; height: auto; margin: 0;">
+            <img src="images/miminage.png" alt="ᎷᏐᩚᎷᏐᩚ REACTION CULTURE" style="width: 100%; height: auto; display: block; border-radius: 16px;">
+        </div>
+    </section>
+<section class="design-card" style="padding: 0; overflow: hidden; border: none; background: none; box-shadow: none; margin-bottom: 40px;">
+        <div style="width: 100%; height: auto; margin: 0;">
+            <img src="images/footer.png" alt="ᎷᏐᩚᎷᏐᩚ KEYWORDS & TAGS" style="width: 100%; height: auto; display: block; border-radius: 16px;">
+        </div>
+    </section>
+
+</div> </body>
+</html>
