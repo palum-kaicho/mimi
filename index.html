@@ -115,7 +115,68 @@
     </div>
 </section>
 
+<section class="design-card" style="padding: 0; overflow: hidden; border: none; background: none; box-shadow: none;">
+    <div style="position: relative; width: 100%; height: auto; margin: 0; padding: 0;">
+        
+        <img src="images/comment.png" alt="ᎷᏐᩚᎷᏐᩚ KIRAKOME" style="width: 100%; height: auto; display: block; border-radius: 16px;">
+        
+        <button onclick="copyKiraKome(1)" style="position: absolute; left: 70%; top: 32.5%; width: 22%; height: 4.5%; background: none; border: none; border-radius: 20px; cursor: pointer; z-index: 20; outline: none;" title="キラコメ1をコピー"></button>
+        
+        <button onclick="copyKiraKome(2)" style="position: absolute; left: 70%; top: 51.5%; width: 22%; height: 4.5%; background: none; border: none; border-radius: 20px; cursor: pointer; z-index: 20; outline: none;" title="キラコメ2をコピー"></button>
+        
+        <button onclick="copyKiraKome(3)" style="position: absolute; left: 70%; top: 70.5%; width: 22%; height: 4.5%; background: none; border: none; border-radius: 20px; cursor: pointer; z-index: 20; outline: none;" title="キラコメ3をコピー"></button>
+        
+        <button onclick="copyKiraKome(4)" style="position: absolute; left: 70%; top: 89.5%; width: 22%; height: 4.5%; background: none; border: none; border-radius: 20px; cursor: pointer; z-index: 20; outline: none;" title="キラコメ4をコピー"></button>
+        
+    </div>
+</section>
 
+<script>
+function copyKiraKome(num) {
+    let text = "";
+    
+    // ご提示いただいた最新のキラコメテキストを反映
+    switch(num) {
+        case 1:
+            text = "💜ง🫩วง🥺วᎷᏐᩚᎷᏐᩚがいっちばーんง🫪วง😒ว💜";
+            break;
+        case 2:
+            text = "🩷•*¨*•.¸¸⸌̟͂̋⸍̑⸜̑⸝͂³³🤍ᎷᏐᩚᎷᏐᩚ🖤⸌̟͂̋⸍̑⸜̑⸝͂³³.•*¨*•.¸¸♬🩷";
+            break;
+        case 3:
+            text = "‪·̩͙‪❦愛 ﾀﾞﾈ🩷⛓️🤍𝟛𝟛🖤⛓️💜愛ﾀﾞｮ‪‪❦";
+            break;
+        case 4:
+            text = "🐾🎀💜🎀🐾🎀🐾💜🐾🎀🐾💜ʚ🎀ɞ";
+            break;
+    }
+    
+    if(text === "") return;
+
+    navigator.clipboard.writeText(text).then(() => {
+        // 既存のトースト通知の要素を取得して使い回す
+        const toast = document.getElementById('copy-toast');
+        
+        // 通知の文字をキラコメ用に一時的に書き換える
+        toast.innerHTML = "💘 キラコメをコピーしたよ！";
+        
+        // トースト通知を表示
+        toast.style.opacity = "1";
+        toast.style.transform = "translateX(-50%) translateY(0)";
+        
+        // 2秒後に隠して文字を元に戻す
+        setTimeout(() => {
+            toast.style.opacity = "0";
+            toast.style.transform = "translateX(-50%) translateY(100px)";
+            setTimeout(() => {
+                toast.innerHTML = "💘 ファンマークをコピーしたよ！ (ᰔᩚ³³)";
+            }, 400);
+        }, 2000);
+    }).catch(err => {
+        console.error('コピー失敗や...: ', err);
+    });
+}
+</script>
 <section class="design-card" style="padding: 0; overflow: hidden; border: none; background: none; box-shadow: none;">
         <div style="width: 100%; height: auto; margin: 0;">
             <img src="images/miminage.png" alt="ᎷᏐᩚᎷᏐᩚ REACTION CULTURE" style="width: 100%; height: auto; display: block; border-radius: 16px;">
